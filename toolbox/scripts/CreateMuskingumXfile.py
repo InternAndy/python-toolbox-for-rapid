@@ -24,8 +24,8 @@ class CreateMuskingumXfile(object):
 
     def getParameterInfo(self):
         """Define parameter definitions"""
-        rapid_out_folder = arcpy.Parameter(name = 'RAPID Output Folder',
-                                           displayName = 'rapid_out_folder',
+        rapid_out_folder = arcpy.Parameter(name = 'rapid_out_folder',
+                                           displayName = 'RAPID Output Folder',
                                            datatype = 'DEFolder',
                                            parameterType = 'Required',
                                            direction = 'Input')
@@ -54,8 +54,8 @@ class CreateMuskingumXfile(object):
                                     datatype="GPDouble")
         Default_x.value = "0.3"
          
-        Input_Reservoir = arcpy.Parameter(name = 'Reservoir Input',
-                                           displayName = 'Input_Reservoirs',
+        Input_Reservoir = arcpy.Parameter(name = 'Input_Reservoir',
+                                           displayName = 'Reservoir Input',
                                            datatype = 'GPFeatureLayer',
                                            parameterType = 'Optional',
                                            direction = 'Input')
