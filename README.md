@@ -103,6 +103,9 @@ The tools are organized into four toolsets. One for preprocessing and preparing 
 
   Using lambda, this tool modifies each of the Kfac values by multiplying by lambda and generates the calibrated Muskgingum K file (e.g. k.csv). 
   The value for lambda is obtained by running the calibration routine in RAPID for your simulation. 
+  
+* #### Create Muskingum X file
+    This tool generates a uniform Muskingum X value for the entire stream network. There is an option to add a shapefile of reservoirs which change the X value to zero for all drainagelines which intersect a reservoir. 
 
 ### Postprocessing tools
 
@@ -138,6 +141,25 @@ The tools are organized into four toolsets. One for preprocessing and preparing 
 * #### Publish Discharge Map
 
   This tool publishes a discharge map service of stream flow visualization to an ArcGIS server.
+  
+### Workflow Tools
+
+* #### Automatic RAPID file Generator
+
+    Creates a file geodatabase containing drainagelines and drainagelines in addition to several other files used to generate them. 
+    It also creates two folders; one containing all the necessary input files for the RAPID program and the other containing the inputs for the Streamflow Predicition Tool.
+    
+* #### HydroSHEDS to Stream Network
+
+    Creates all the drainagelines and catchments for a given region using HydroSHEDS conditioned DEM data and a shapefile of the region as the inputs.
+    
+* #### Stream Network to RAPID
+
+    Uses the drainagelines and catchments generated from the HydroSHEDS to Stream Network tool to create all the necessary input files to run RAPID.
+    
+* #### Stream Network to SPT catchments generated from the HydroSHEDS to Stream Network tool to create the input files for the Streamflow Preditiction Tool.
+
+    Uses the 
 
 ## Licensing
 Copyright 2016 Esri
